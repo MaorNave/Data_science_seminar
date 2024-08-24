@@ -14,6 +14,8 @@ performance over VGG16, achieving a test accuracy of 83.01% compared to 82.51%. 
 VGG19 model’s additional convolutional layers contributed to its enhanced ability to handle
 complex segmentation tasks, resulting in more precise and detailed visual predictions.
 
+project programmed on Google Colab enviorment (A100 GPU , 40 GB Memory with Tensor-Board)
+
 # Methodology and Implementation
 The methodology and implementation of the experiment represented in this research involve
 several critical steps, beginning with the use of the ”Semantic Segmentation of Aerial Im-
