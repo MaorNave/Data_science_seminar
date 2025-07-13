@@ -6,15 +6,15 @@ This project presents a comparative analysis of deep neural networks (VGG16 and 
 
 Environment: Google Colab (A100 GPU, 40GB Memory) with TensorBoard monitoring.
 
-# 🧐 Abstract
+## 🧐 Abstract
 
 This study provides an in-depth exploration of digital image processing and computer vision techniques, beginning with the physics of image acquisition and advancing through foundational algorithms and modern deep learning approaches. It investigates the use of VGG16 and VGG19 architectures in solving semantic segmentation tasks, using aerial images captured over Dubai.
 
 Through comprehensive experimentation with varying learning rates, VGG19 achieved superior results, reaching a test accuracy of 83.01%, outperforming VGG16's 82.51%. This improvement is largely attributed to VGG19's deeper architecture, enabling better representation and segmentation of complex spatial features in aerial imagery.
 
-# 🔧 Methodology & Implementation
+## 🔧 Methodology & Implementation
 
-## 📦 Dataset
+### 📦 Dataset
 
 Source: Semantic Segmentation of Aerial Imagery (Kaggle)
 
@@ -22,7 +22,7 @@ Content: 72 satellite images of Dubai (MBRSC satellites), annotated for 6 semant
 
 Structure: Organized into six large tiles
 
-## 🧰 Data Preprocessing
+### 🧰 Data Preprocessing
 
 A custom DataGenerator module was developed to prepare the dataset:
 
@@ -38,9 +38,9 @@ Maintains balanced class distribution across splits
 
 This preprocessing pipeline ensures high variability and generalization capacity across different spatial contexts.
 
-# 🧪 Model Fine-Tuning & Training
+## 🧪 Model Fine-Tuning & Training
 
-## 🔍 Model Architecture
+### 🔍 Model Architecture
 
 A custom SegmentationModel module was implemented:
 
@@ -50,7 +50,7 @@ Replaces classifier head with an upsampling module (5 convolutional + ReLU layer
 
 Outputs probability maps for each segmentation class
 
-## 🏋️ Training & Validation
+### 🏋️ Training & Validation
 
 The TrainValModels module performs:
 
@@ -64,7 +64,7 @@ Automatic saving of best model weights
 
 Final evaluation on test set (batch size 16)
 
-## 🔮 Predictions
+### 🔮 Predictions
 
 The PredictModels module:
 
@@ -76,7 +76,7 @@ Supports bypassing weight files to re-initialize models if needed
 
 This modular setup ensures reproducibility, robustness, and a clear understanding of each model's behavior under identical training conditions.
 
-# 📊 Key Findings
+## 📊 Key Findings
 
 Best model: VGG19 (Test Accuracy: 83.01%)
 
@@ -84,8 +84,12 @@ Additional convolutional layers in VGG19 improved segmentation granularity
 
 Custom upsampling head yielded strong pixel-wise classification performance
 
-# 📧 Contact Me
+## 📧 Contact Me
 
 I'm always open to feedback, collaboration, and new research opportunities.
 
-📬 Email: maornanibar@gmail.com💬 LinkedIn: linkedin.com/in/maornave🧠 Research Interests:Computer Vision – Advanced image processing and physical simulationsData Analytics – Statistical analysis and database optimizationAI Applications – Machine & Deep learning
+📬 Email: maornanibar@gmail.com
+
+💬 LinkedIn: linkedin.com/in/maornave
+
+🧠 Research Interests:Computer Vision – Advanced image processing and physical simulationsData Analytics – Statistical analysis and database optimizationAI Applications – Machine & Deep learning
